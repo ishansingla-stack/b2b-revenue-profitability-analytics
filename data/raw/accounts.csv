@@ -1,0 +1,201 @@
+account_id,account_name,industry,company_size,region,contract_type,signup_date,status
+1,Account_1,Manufacturing,32,APAC,annual,2022-05-06,active
+2,Account_2,Logistics,91,APAC,monthly,2022-12-13,active
+3,Account_3,Technology,64,APAC,annual,2022-01-17,active
+4,Account_4,Manufacturing,67,North America,monthly,2022-09-16,active
+5,Account_5,Technology,33,APAC,monthly,2022-11-29,active
+6,Account_6,Technology,234,North America,annual,2022-10-29,active
+7,Account_7,Retail,434,North America,monthly,2022-12-24,active
+8,Account_8,Healthcare,194,Europe,monthly,2022-04-21,active
+9,Account_9,Retail,72,North America,annual,2022-02-19,active
+10,Account_10,Retail,453,Europe,annual,2022-01-23,active
+11,Account_11,Healthcare,294,North America,annual,2022-02-10,active
+12,Account_12,Technology,170,APAC,annual,2022-10-23,active
+13,Account_13,Logistics,380,North America,monthly,2022-12-05,active
+14,Account_14,Logistics,415,Europe,monthly,2022-04-30,active
+15,Account_15,Manufacturing,214,Europe,annual,2022-11-22,active
+16,Account_16,Retail,103,Europe,annual,2022-04-18,active
+17,Account_17,Retail,379,APAC,monthly,2022-11-08,active
+18,Account_18,Logistics,293,APAC,monthly,2022-03-25,active
+19,Account_19,Healthcare,214,Europe,monthly,2022-12-17,active
+20,Account_20,Retail,451,North America,monthly,2022-01-17,active
+21,Account_21,Retail,225,Europe,monthly,2022-04-19,active
+22,Account_22,Technology,468,APAC,annual,2022-04-19,active
+23,Account_23,Healthcare,222,APAC,annual,2022-03-15,active
+24,Account_24,Retail,91,North America,annual,2022-10-27,active
+25,Account_25,Healthcare,479,APAC,annual,2022-07-05,active
+26,Account_26,Logistics,90,APAC,annual,2022-02-16,active
+27,Account_27,Manufacturing,460,North America,monthly,2022-11-18,active
+28,Account_28,Logistics,425,APAC,annual,2022-11-02,active
+29,Account_29,Manufacturing,217,Europe,annual,2022-09-28,active
+30,Account_30,Retail,303,North America,monthly,2022-12-16,active
+31,Account_31,Technology,404,Europe,annual,2022-02-27,active
+32,Account_32,Retail,242,North America,annual,2022-01-02,active
+33,Account_33,Retail,276,North America,monthly,2022-11-17,active
+34,Account_34,Retail,450,APAC,monthly,2022-03-20,active
+35,Account_35,Retail,410,North America,monthly,2022-11-03,active
+36,Account_36,Retail,270,North America,monthly,2022-07-05,active
+37,Account_37,Retail,142,North America,monthly,2022-10-18,active
+38,Account_38,Manufacturing,63,APAC,annual,2022-02-05,active
+39,Account_39,Technology,412,North America,monthly,2022-12-04,active
+40,Account_40,Healthcare,301,North America,annual,2022-09-28,active
+41,Account_41,Technology,236,North America,monthly,2023-01-01,active
+42,Account_42,Retail,224,APAC,annual,2022-08-13,active
+43,Account_43,Technology,251,North America,monthly,2022-04-26,active
+44,Account_44,Manufacturing,193,North America,monthly,2022-10-29,active
+45,Account_45,Logistics,23,North America,monthly,2022-04-28,active
+46,Account_46,Manufacturing,483,North America,annual,2022-02-06,active
+47,Account_47,Technology,141,Europe,annual,2022-04-20,active
+48,Account_48,Technology,87,APAC,annual,2022-05-05,active
+49,Account_49,Healthcare,433,Europe,monthly,2022-02-18,active
+50,Account_50,Manufacturing,357,Europe,annual,2022-08-05,active
+51,Account_51,Healthcare,259,APAC,monthly,2022-12-11,active
+52,Account_52,Manufacturing,51,Europe,annual,2022-02-25,active
+53,Account_53,Logistics,118,North America,annual,2022-03-13,active
+54,Account_54,Healthcare,113,Europe,annual,2022-05-08,active
+55,Account_55,Manufacturing,246,APAC,monthly,2022-01-26,active
+56,Account_56,Technology,448,North America,monthly,2022-05-02,active
+57,Account_57,Logistics,228,Europe,annual,2022-04-20,active
+58,Account_58,Healthcare,482,North America,monthly,2022-07-14,active
+59,Account_59,Manufacturing,219,Europe,annual,2022-05-27,active
+60,Account_60,Healthcare,376,APAC,annual,2022-03-21,active
+61,Account_61,Logistics,171,North America,monthly,2022-10-24,active
+62,Account_62,Technology,51,APAC,annual,2022-01-30,active
+63,Account_63,Manufacturing,319,Europe,monthly,2022-01-30,active
+64,Account_64,Technology,61,North America,monthly,2022-11-01,active
+65,Account_65,Manufacturing,365,North America,annual,2022-03-03,active
+66,Account_66,Technology,146,APAC,monthly,2022-11-14,active
+67,Account_67,Manufacturing,234,APAC,annual,2022-05-14,active
+68,Account_68,Logistics,362,APAC,annual,2022-05-03,active
+69,Account_69,Retail,222,North America,annual,2022-08-23,active
+70,Account_70,Retail,495,North America,monthly,2022-08-23,active
+71,Account_71,Technology,308,North America,monthly,2022-10-03,active
+72,Account_72,Logistics,279,Europe,monthly,2022-06-28,active
+73,Account_73,Manufacturing,470,North America,annual,2022-05-26,active
+74,Account_74,Logistics,244,APAC,annual,2022-11-10,active
+75,Account_75,Technology,24,APAC,annual,2022-12-06,active
+76,Account_76,Manufacturing,500,North America,annual,2022-03-01,active
+77,Account_77,Manufacturing,400,APAC,monthly,2022-05-20,active
+78,Account_78,Retail,329,North America,annual,2022-04-15,active
+79,Account_79,Retail,278,Europe,annual,2022-01-27,active
+80,Account_80,Manufacturing,344,Europe,annual,2022-01-23,active
+81,Account_81,Manufacturing,190,North America,annual,2022-03-24,active
+82,Account_82,Healthcare,302,APAC,annual,2022-10-15,active
+83,Account_83,Manufacturing,77,North America,monthly,2022-10-07,active
+84,Account_84,Manufacturing,447,Europe,monthly,2022-08-09,active
+85,Account_85,Logistics,41,Europe,annual,2022-01-21,active
+86,Account_86,Retail,127,APAC,monthly,2022-12-08,active
+87,Account_87,Manufacturing,201,APAC,annual,2022-11-14,active
+88,Account_88,Logistics,493,North America,monthly,2022-04-01,active
+89,Account_89,Healthcare,32,North America,annual,2022-07-30,active
+90,Account_90,Logistics,156,North America,monthly,2022-07-15,active
+91,Account_91,Manufacturing,459,Europe,monthly,2022-04-13,active
+92,Account_92,Healthcare,199,Europe,monthly,2022-04-25,active
+93,Account_93,Manufacturing,357,North America,annual,2022-06-18,active
+94,Account_94,Retail,462,North America,annual,2022-06-29,active
+95,Account_95,Technology,224,APAC,annual,2022-01-15,active
+96,Account_96,Manufacturing,469,Europe,monthly,2022-10-25,active
+97,Account_97,Retail,39,North America,annual,2022-06-26,active
+98,Account_98,Retail,243,APAC,monthly,2022-07-17,active
+99,Account_99,Technology,117,Europe,monthly,2022-12-29,active
+100,Account_100,Healthcare,20,APAC,monthly,2022-07-06,active
+101,Account_101,Healthcare,55,APAC,annual,2022-11-16,active
+102,Account_102,Retail,359,North America,annual,2022-09-17,active
+103,Account_103,Retail,361,Europe,annual,2022-07-26,active
+104,Account_104,Retail,303,North America,monthly,2022-08-04,active
+105,Account_105,Healthcare,366,APAC,monthly,2022-11-12,active
+106,Account_106,Technology,174,Europe,monthly,2022-06-05,active
+107,Account_107,Retail,127,Europe,annual,2022-08-27,active
+108,Account_108,Healthcare,246,APAC,monthly,2022-09-19,active
+109,Account_109,Healthcare,426,APAC,monthly,2022-12-04,active
+110,Account_110,Manufacturing,165,APAC,annual,2022-02-17,active
+111,Account_111,Logistics,364,Europe,monthly,2022-04-12,active
+112,Account_112,Logistics,32,North America,monthly,2022-09-01,active
+113,Account_113,Technology,455,North America,annual,2022-08-01,active
+114,Account_114,Technology,119,APAC,annual,2022-09-11,active
+115,Account_115,Healthcare,144,North America,monthly,2022-02-24,active
+116,Account_116,Healthcare,132,North America,annual,2022-01-26,active
+117,Account_117,Technology,147,North America,annual,2022-03-10,active
+118,Account_118,Healthcare,361,APAC,annual,2022-08-15,active
+119,Account_119,Technology,437,APAC,annual,2022-10-08,active
+120,Account_120,Healthcare,479,North America,annual,2022-08-19,active
+121,Account_121,Retail,404,North America,annual,2022-09-24,active
+122,Account_122,Healthcare,340,North America,annual,2022-08-14,active
+123,Account_123,Manufacturing,385,Europe,monthly,2022-05-20,active
+124,Account_124,Retail,183,APAC,monthly,2022-03-12,active
+125,Account_125,Logistics,138,Europe,monthly,2022-12-28,active
+126,Account_126,Logistics,52,Europe,annual,2022-06-19,active
+127,Account_127,Technology,258,Europe,monthly,2022-04-16,active
+128,Account_128,Healthcare,219,APAC,monthly,2022-10-22,active
+129,Account_129,Healthcare,264,North America,annual,2022-06-02,active
+130,Account_130,Healthcare,456,Europe,monthly,2022-09-07,active
+131,Account_131,Logistics,159,Europe,annual,2022-01-15,active
+132,Account_132,Healthcare,192,APAC,annual,2022-03-26,active
+133,Account_133,Healthcare,490,North America,monthly,2022-07-21,active
+134,Account_134,Technology,308,APAC,monthly,2022-02-12,active
+135,Account_135,Healthcare,89,Europe,monthly,2022-01-26,active
+136,Account_136,Retail,214,Europe,monthly,2022-08-21,active
+137,Account_137,Retail,192,Europe,annual,2022-08-04,active
+138,Account_138,Retail,447,North America,annual,2022-01-10,active
+139,Account_139,Technology,46,Europe,monthly,2022-11-29,active
+140,Account_140,Manufacturing,419,APAC,monthly,2022-01-16,active
+141,Account_141,Logistics,122,North America,monthly,2022-05-03,active
+142,Account_142,Logistics,262,APAC,monthly,2022-10-16,active
+143,Account_143,Logistics,258,APAC,annual,2022-07-08,active
+144,Account_144,Logistics,330,APAC,monthly,2022-03-25,active
+145,Account_145,Retail,75,APAC,monthly,2022-06-09,active
+146,Account_146,Technology,366,Europe,annual,2022-04-12,active
+147,Account_147,Manufacturing,323,APAC,monthly,2022-02-22,active
+148,Account_148,Retail,455,APAC,monthly,2022-10-17,active
+149,Account_149,Manufacturing,197,APAC,annual,2022-12-05,active
+150,Account_150,Retail,55,APAC,annual,2022-01-07,active
+151,Account_151,Healthcare,441,Europe,monthly,2022-08-10,active
+152,Account_152,Retail,345,Europe,monthly,2022-08-11,active
+153,Account_153,Logistics,395,APAC,annual,2022-11-12,active
+154,Account_154,Technology,416,Europe,annual,2022-08-12,active
+155,Account_155,Technology,157,Europe,monthly,2022-02-14,active
+156,Account_156,Retail,471,Europe,monthly,2022-08-26,active
+157,Account_157,Technology,332,APAC,annual,2022-06-22,active
+158,Account_158,Manufacturing,273,Europe,monthly,2022-09-07,active
+159,Account_159,Logistics,201,Europe,annual,2022-05-24,active
+160,Account_160,Technology,379,Europe,monthly,2022-09-22,active
+161,Account_161,Logistics,63,North America,annual,2022-09-08,active
+162,Account_162,Technology,408,North America,annual,2022-11-27,active
+163,Account_163,Healthcare,249,North America,monthly,2022-05-31,active
+164,Account_164,Logistics,227,APAC,monthly,2022-06-06,active
+165,Account_165,Technology,208,Europe,annual,2022-08-06,active
+166,Account_166,Technology,189,Europe,annual,2022-05-19,active
+167,Account_167,Retail,148,North America,monthly,2022-04-09,active
+168,Account_168,Retail,81,APAC,monthly,2022-04-09,active
+169,Account_169,Logistics,398,Europe,annual,2022-10-29,active
+170,Account_170,Technology,325,Europe,monthly,2022-04-10,active
+171,Account_171,Retail,136,Europe,monthly,2022-06-04,active
+172,Account_172,Manufacturing,382,APAC,monthly,2022-05-21,active
+173,Account_173,Manufacturing,47,APAC,annual,2022-12-24,active
+174,Account_174,Logistics,346,Europe,monthly,2022-01-07,active
+175,Account_175,Technology,165,Europe,annual,2022-08-14,active
+176,Account_176,Retail,114,North America,annual,2022-09-02,active
+177,Account_177,Manufacturing,440,North America,annual,2022-09-09,active
+178,Account_178,Manufacturing,315,APAC,monthly,2022-03-19,active
+179,Account_179,Logistics,435,APAC,annual,2022-02-13,active
+180,Account_180,Logistics,80,APAC,annual,2022-11-07,active
+181,Account_181,Technology,424,APAC,monthly,2022-09-25,active
+182,Account_182,Healthcare,250,Europe,annual,2022-10-29,active
+183,Account_183,Healthcare,176,APAC,monthly,2022-11-09,active
+184,Account_184,Manufacturing,410,North America,monthly,2022-05-16,active
+185,Account_185,Manufacturing,100,North America,monthly,2022-10-10,active
+186,Account_186,Manufacturing,100,North America,annual,2022-08-19,active
+187,Account_187,Technology,260,Europe,monthly,2022-04-29,active
+188,Account_188,Retail,381,Europe,annual,2022-02-06,active
+189,Account_189,Logistics,493,Europe,monthly,2022-08-06,active
+190,Account_190,Manufacturing,298,North America,monthly,2022-05-17,active
+191,Account_191,Logistics,56,North America,monthly,2022-06-07,active
+192,Account_192,Technology,403,APAC,annual,2022-08-13,active
+193,Account_193,Manufacturing,259,APAC,annual,2022-12-25,active
+194,Account_194,Healthcare,159,APAC,annual,2022-08-13,active
+195,Account_195,Manufacturing,326,North America,annual,2022-06-15,active
+196,Account_196,Technology,148,North America,monthly,2022-04-28,active
+197,Account_197,Technology,320,North America,annual,2022-10-23,active
+198,Account_198,Manufacturing,410,North America,annual,2022-09-23,active
+199,Account_199,Healthcare,489,Europe,monthly,2022-10-27,active
+200,Account_200,Healthcare,345,Europe,monthly,2022-08-29,active
