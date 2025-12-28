@@ -164,3 +164,133 @@ SELECT
 FROM account_profitability
 GROUP BY account_id
 ORDER BY total_profit DESC;
+
+
+
+
+-- Time-based segmentation
+
+/* ------------------------------------------------------------
+   RECENT PERFORMANCE (LAST 3 MONTHS — DATA-DRIVEN)
+   ------------------------------------------------------------
+   Purpose:
+   - Measure current account health based on latest available data
+------------------------------------------------------------- */
+WITH max_month AS (
+    SELECT MAX(month) AS max_month
+    FROM account_profitability
+)
+SELECT
+    ap.account_id,
+    SUM(ap.revenue) AS recent_revenue,
+    SUM(ap.profit) AS recent_profit,
+    ROUND(SUM(ap.profit) / NULLIF(SUM(ap.revenue), 0), 4) AS recent_margin
+FROM account_profitability ap
+CROSS JOIN max_month m
+WHERE ap.month >= (m.max_month - INTERVAL '3 months')
+GROUP BY ap.account_id;
+
+
+
+
+/* ------------------------------------------------------------
+   HISTORICAL PERFORMANCE (BEFORE LAST 3 MONTHS)
+   ------------------------------------------------------------
+   Purpose:
+   - Establish baseline profitability
+------------------------------------------------------------- */
+SELECT
+    account_id,
+    SUM(revenue) AS historical_revenue,
+    SUM(profit) AS historical_profit,
+    ROUND(SUM(profit) / NULLIF(SUM(revenue), 0), 4) AS historical_margin
+FROM account_profitability
+WHERE month < (CURRENT_DATE - INTERVAL '3 months')
+GROUP BY account_id;
+
+
+/* ------------------------------------------------------------
+   PROFITABILITY TREND ANALYSIS
+   ------------------------------------------------------------
+   Business Question:
+   - Is account profitability improving or declining?
+
+   Logic:
+   - Compare recent margin vs historical margin
+------------------------------------------------------------- */
+WITH max_month AS (
+    SELECT MAX(month) AS max_month
+    FROM account_profitability
+),
+recent AS (
+    SELECT
+        account_id,
+        SUM(revenue) AS recent_revenue,
+        SUM(profit) AS recent_profit,
+        ROUND(SUM(profit) / NULLIF(SUM(revenue), 0), 4) AS recent_margin
+    FROM account_profitability, max_month
+    WHERE month >= (max_month - INTERVAL '3 months')
+    GROUP BY account_id
+),
+historical AS (
+    SELECT
+        account_id,
+        SUM(revenue) AS historical_revenue,
+        SUM(profit) AS historical_profit,
+        ROUND(SUM(profit) / NULLIF(SUM(revenue), 0), 4) AS historical_margin
+    FROM account_profitability, max_month
+    WHERE month < (max_month - INTERVAL '3 months')
+    GROUP BY account_id
+)
+SELECT
+    r.account_id,
+    r.recent_revenue,
+    r.recent_profit,
+    r.recent_margin,
+    h.historical_margin,
+    CASE
+        WHEN h.historical_margin IS NULL THEN 'No History'
+        WHEN r.recent_margin > h.historical_margin THEN 'Improving'
+        WHEN r.recent_margin < h.historical_margin THEN 'Deteriorating'
+        ELSE 'Stable'
+    END AS trend_status
+FROM recent r
+LEFT JOIN historical h
+    ON r.account_id = h.account_id
+ORDER BY r.recent_margin ASC;
+
+
+
+
+/* ------------------------------------------------------------
+   TIME-BASED EXECUTIVE ACTION SEGMENTATION
+   ------------------------------------------------------------
+   Purpose:
+   - Flag accounts needing immediate attention
+------------------------------------------------------------- */
+WITH max_month AS (
+    SELECT MAX(month) AS max_month
+    FROM account_profitability
+),
+recent AS (
+    SELECT
+        account_id,
+        SUM(revenue) AS recent_revenue,
+        SUM(profit) AS recent_profit,
+        ROUND(SUM(profit) / NULLIF(SUM(revenue), 0), 4) AS recent_margin
+    FROM account_profitability, max_month
+    WHERE month >= (max_month - INTERVAL '3 months')
+    GROUP BY account_id
+)
+SELECT
+    account_id,
+    recent_revenue,
+    recent_profit,
+    recent_margin,
+    CASE
+        WHEN recent_margin < 0 THEN 'Urgent Risk'
+        WHEN recent_margin BETWEEN 0 AND 0.05 THEN 'Watch Closely'
+        WHEN recent_margin > 0.05 THEN 'Healthy'
+    END AS recent_status
+FROM recent
+ORDER BY recent_margin ASC;
