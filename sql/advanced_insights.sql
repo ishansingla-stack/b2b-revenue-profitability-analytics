@@ -294,3 +294,76 @@ SELECT
     END AS recent_status
 FROM recent
 ORDER BY recent_margin ASC;
+
+
+
+/* ------------------------------------------------------------
+   ML LABEL GENERATION: ACCOUNT DETERIORATION
+-------------------------------------------------------------
+   Label = 1 (Deteriorating)
+   - Recent margin < historical margin by ≥ 5%
+   - OR recent margin < 0
+
+   Label = 0 (Stable / Improving)
+------------------------------------------------------------- */
+
+/* ------------------------------------------------------------
+   ML TRAINING VIEW: ACCOUNT DETERIORATION PREDICTION
+-------------------------------------------------------------
+   Label = 1 (Deteriorating)
+   - Recent margin < historical margin by ≥ 5%
+   - OR recent margin < 0
+
+   Label = 0 (Stable / Improving)
+------------------------------------------------------------- */
+
+CREATE OR REPLACE VIEW ml_account_training_data AS
+WITH max_month AS (
+    SELECT MAX(month) AS max_month
+    FROM account_profitability
+),
+recent AS (
+    SELECT
+        account_id,
+        ROUND(SUM(profit) / NULLIF(SUM(revenue), 0), 4) AS recent_margin
+    FROM account_profitability, max_month
+    WHERE month >= (max_month - INTERVAL '3 months')
+    GROUP BY account_id
+),
+historical AS (
+    SELECT
+        account_id,
+        ROUND(SUM(profit) / NULLIF(SUM(revenue), 0), 4) AS historical_margin
+    FROM account_profitability, max_month
+    WHERE month < (max_month - INTERVAL '3 months')
+    GROUP BY account_id
+),
+labels AS (
+    SELECT
+        r.account_id,
+        CASE
+            WHEN r.recent_margin < 0 THEN 1
+            WHEN h.historical_margin IS NOT NULL
+                 AND r.recent_margin < (h.historical_margin - 0.05) THEN 1
+            ELSE 0
+        END AS deteriorating_label
+    FROM recent r
+    LEFT JOIN historical h
+        ON r.account_id = h.account_id
+)
+SELECT
+    ap.account_id,
+    ap.month,
+    ap.revenue,
+    ap.profit,
+    ap.support_cost,
+    ROUND(ap.profit / NULLIF(ap.revenue, 0), 4) AS margin,
+    um.active_users,
+    um.api_calls,
+    lbl.deteriorating_label
+FROM account_profitability ap
+LEFT JOIN usage_metrics um
+    ON ap.account_id = um.account_id
+   AND ap.month = um.usage_month
+LEFT JOIN labels lbl
+    ON ap.account_id = lbl.account_id;
